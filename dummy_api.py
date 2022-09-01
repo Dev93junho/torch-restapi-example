@@ -40,7 +40,9 @@ def get_prediction(image_bytes):
 #     image_bytes = f.read()
 #     print(get_prediction(image_bytes=image_bytes))
 
-    
+@app.route('/')
+def hello():
+    return "access flask app"
     
 @app.route('/predict', methods=['POST'])
 def predict():
